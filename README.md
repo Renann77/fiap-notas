@@ -1,50 +1,74 @@
-# Welcome to your Expo app 👋
+# 📘 CP1 - Mobile - Validação de Notas
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 👥 Integrantes
+| Nome | RM |
+|-------|------|
+| **Renan Dorneles Boucault** | 557820 |
+| **Igor Dias Barrocal** | 555217 |
 
-## Get started
+---
 
-1. Install dependencies
+## 📌 **Descrição do Projeto**
+Este projeto é um aplicativo desenvolvido em **React Native** para a **avaliação de notas de alunos**, seguindo as regras acadêmicas da FIAP. O app permite inserir notas, validar a situação do aluno e verificar se ele está **aprovado ou reprovado** com base na média e no número de faltas.
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 🏆 **Objetivo do Projeto**
+✅ **Inserir três notas e o número de faltas**  
+✅ **Validar a situação do aluno conforme as regras da FIAP**  
+✅ **Exibir mensagens de aprovado ou reprovado corretamente**  
+✅ **Resetar os campos ao clicar no logo da FIAP**  
 
-   ```bash
-    npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🖥️ **Tecnologias Utilizadas**
+- **React Native**
+- **Expo**
+- **TypeScript**
+- **Styled Components**
+- **Hooks do React (`useState`, `useWindowDimensions`)**
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🎨 **Layout da Aplicação**
+A tela principal contém:
+- **Logo da FIAP** (clicável para resetar os campos)
+- **Campos de entrada** para as notas e faltas
+- **Botão de validação**
+- **Mensagem indicando aprovação ou reprovação**
 
-## Get a fresh project
+### 📸 **Modo Retrato**
+> ![Print do modo retrato](./assets/screenshot-portrait.png)
 
-When you're ready, run:
+### 📸 **Modo Paisagem**
+> ![Print do modo paisagem](./assets/screenshot-landscape.png)
 
-```bash
-npm run reset-project
-```
+---
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 📌 **Regras de Validação**
+O sistema segue as regras acadêmicas da **FIAP**:
+1️⃣ **Se o aluno tiver mais de 10 faltas →** ❌ "Reprovado por falta"  
+2️⃣ **Se a média final for menor que 6 →** ❌ "Reprovado por nota"  
+3️⃣ **Se atender os critérios →** ✅ "Aprovado com média de X.XX"  
 
-## Learn more
+🔹 **Cálculo da Média**  
+- A menor das três notas é descartada  
+- A média é feita com as **duas maiores notas**  
+- O resultado é exibido com **duas casas decimais**  
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🔍 **Funcionalidades**
+✔ **Campos de entrada para notas e faltas**  
+✔ **Botão para validar a situação do aluno**  
+✔ **Mensagens de feedback claras**  
+✔ **Botão para resetar os campos (clicando no logo da FIAP)**  
+✔ **Responsividade (adapta-se a diferentes telas)**  
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 🚀 **Como Rodar o Projeto**
+### **1️⃣ Clonar o Repositório**
+```sh
+git clone https://github.com/seu-usuario/fiap-notas.git
+cd fiap-notas
